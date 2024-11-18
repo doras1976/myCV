@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section>
+    <h3>Work Experience</h3>
+    {% for job in cv.experience %}
+        <div class="mb-3">
+            <h5>{{ job.period }} - {{ job.position }}{% if job.company %} at {{ job.company }}{% endif %}</h5>
+            <ul>
+                {% for detail in job.details %}
+                    <li>{{ detail }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+</section>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center">
+    <h1>{{ cv.name }}</h1>
+    <p>📞 {{ cv.contact.phone }} | ✉️ <a href="mailto:{{ cv.contact.email }}">{{ cv.contact.email }}</a> | 
+       <a href="{{ cv.contact.linkedin }}" target="_blank">LinkedIn</a></p>
+    <hr>
+</div>
+
+<section>
+    <h3>Summary</h3>
+    <p>{{ cv.summary }}</p>
+</section>
+{% endblock %}

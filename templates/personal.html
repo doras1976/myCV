@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section>
+    <h3>Education & Certifications</h3>
+    <ul>
+        {% for edu in cv.education %}
+            <li>{{ edu }}</li>
+        {% endfor %}
+    </ul>
+</section>
+
+<section class="mt-4">
+    <h3>Military Service</h3>
+    <p>{{ cv.military_service }}</p>
+</section>
+
+<section class="mt-4">
+    <h3>Professional Skills</h3>
+    <ul>
+        {% for skill in cv.skills %}
+            <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+</section>
+
+<section class="mt-4">
+    <h3>Languages</h3>
+    <ul>
+        {% for language in cv.languages %}
+            <li>{{ language }}</li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}
